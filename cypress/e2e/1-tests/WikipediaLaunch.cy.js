@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { LandingPage } from "../pageObjects/LandingPage";
+import { LandingPage, VerifyPageLanding } from "../pageObjects/LandingPage";
 
 describe('Wikipedia', () => 
 {
@@ -12,5 +12,6 @@ describe('Wikipedia', () =>
     {
         cy.title().should('eq', 'Wikipedia');
         LandingPage.selectLanguage('English');
+        VerifyPageLanding.englishWikiShouldBeDisplayed();
     });    
 });
