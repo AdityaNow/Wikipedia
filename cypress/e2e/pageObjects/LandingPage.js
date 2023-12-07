@@ -14,6 +14,12 @@ export class VerifyLandingPage{
         .contains('English');
     }
 
+    readWikiInYourLanguageDisplayed(){
+        cy.get('#js-lang-list-button > span')
+        .contains('Read Wikipedia in your language')
+        .should('be.visible');
+    }
+
 }
 export const PageLanding = new LandingPage()
 export const VerifyPageLanding = new VerifyLandingPage()

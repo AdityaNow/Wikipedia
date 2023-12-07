@@ -13,6 +13,7 @@ describe('Wikipedia', () =>
     it('Open Wikipedia', () =>
     {
         cy.title().should('eq', 'Wikipedia');
+        VerifyPageLanding.readWikiInYourLanguageDisplayed();
         LandingPage.selectLanguage('English');
         VerifyPageLanding.englishWikiShouldBeDisplayed();
     });    
