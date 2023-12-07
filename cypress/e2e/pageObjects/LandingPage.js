@@ -9,7 +9,9 @@ export class LandingPage{
 export class VerifyLandingPage{
     
     englishWikiShouldBeDisplayed(){
-        cy.get('#articlecount').should('be.visible').contains(' articles in').should('be.visible').contains('English');
+        cy.get('#articlecount').should('be.visible')
+        .contains(' articles in').should('be.visible')
+        .contains('English');
     }
 
 }
