@@ -14,8 +14,3 @@ Purpose - Get Information From Wikipedia
 4. git clone "https://github.com/AdityaNow/Wikipedia.git"
 5. npm install cypress --save-dev
 6. npx cypress open > Cypress Runner will open to execute tests
-
-
-
-
-
