@@ -9,6 +9,7 @@ export class CommonFunctions{
         cy.url().should('eq', keyword1);
     }
 
+
 }
 
 
