@@ -5,7 +5,7 @@ Purpose - Get Information From Wikipedia
 ### Prerequisites
 1. <a href="https://git-scm.com/downloads">Git</a> </br>
 2. <a href="https://code.visualstudio.com/download">Visual Studio Code</a>  </br>
-3. <a href="https://nodejs.org/en/download">Nodejs</a>  </br>
+3. <a href="https://nodejs.org/en/download">Node.js</a>  </br>
 
 ### Getting Started
 1. Create a local project folder
