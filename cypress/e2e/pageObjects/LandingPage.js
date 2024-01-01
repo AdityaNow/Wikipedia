@@ -2,7 +2,7 @@
 export class LandingPage{
 
     static selectLanguage(lang){
-        cy.get('[class="link-box"]').contains(lang).click();
+        cy.get('[class="link-box"]').contains(lang).click(); //.then((response) => {expect(response.ajaxSuccess)})
     }    
 }
 

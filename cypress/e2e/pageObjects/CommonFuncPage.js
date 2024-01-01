@@ -1,10 +1,16 @@
 export class CommonFunctions{
     
-    toSearch(keyword){
-        cy.get('#searchInput').type(keyword);
-        cy.get('.cdx-search-input__end-button').click();
-        
+    elements ={
+        searchInput : () => cy.get('#searchInput'),
+        searchBtn : () => cy.get('.cdx-search-input__end-button')
     }
+
+
+    toSearch(keyword){
+        this.elements.searchInput().type(keyword);
+        this.elements.searchBtn().click(); 
+    }
+    
     verifySearchResultUrl(keyword1){
         cy.url().should('eq', keyword1);
     }
