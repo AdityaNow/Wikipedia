@@ -16,6 +16,6 @@ Purpose - Get Information From Wikipedia
 6. npx cypress open > Cypress Runner will open to execute tests
 
 ### Execution Demo
-Steps - Build the Solution and run tests from test explorer </br>
+Play tests from Cypress Runner </br>
 </br>
 [![Video](https://img.youtube.com/vi/yN2WTHkc3fM/0.jpg)](https://youtu.be/yN2WTHkc3fM)
