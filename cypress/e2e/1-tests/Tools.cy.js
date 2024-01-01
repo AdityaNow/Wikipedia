@@ -19,7 +19,7 @@ describe('Wikipedia-Tools', () =>
         Tools.selectAOptioFromToolsDropdown('What links here');
     });   
     
-    it.only('Page Dropdown List', () =>
+    it('Page Dropdown List', () =>
     {
         Tools.toolsDropdown();
         Tools.selectAOptioFromToolsDropdown('What links here');
@@ -27,5 +27,11 @@ describe('Wikipedia-Tools', () =>
         PagesLinkTo.pageList();
         PagesLinkTo.getListItemsFromPage()
     });
+
+    it('Main Menu Items', () => {
+        Tools.openMainMenu();
+        Tools.getAllMenuItems();
+    });
+
     
 });

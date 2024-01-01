@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import { LandingPage, VerifyPageLanding } from "../pageObjects/LandingPage";
-import { CommonFuncPage } from "../pageObjects/CommonFunc";
+import { CommonFunc } from "../pageObjects/CommonFuncPage";
 
 let KEYWORD = 'Sachin Tendulkar';
 let KEYWORD_URL = 'https://en.wikipedia.org/wiki/Sachin_Tendulkar';
@@ -18,7 +18,7 @@ describe('Wikipedia', () =>
 
     it('Search Sachin Tendulkar', () =>
     {
-        CommonFuncPage.toSearch(KEYWORD);
-        CommonFuncPage.verifySearchResultUrl(KEYWORD_URL);
+        CommonFunc.toSearch(KEYWORD);
+        CommonFunc.verifySearchResultUrl(KEYWORD_URL);
     });    
 });
