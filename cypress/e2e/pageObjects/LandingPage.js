@@ -1,22 +1,31 @@
 
 export class LandingPage{
 
+    static landingPageElements={
+        selectLanguageLink : () => cy.get('[class="link-box"]')
+    }
+
     static selectLanguage(lang){
-        cy.get('[class="link-box"]').contains(lang).click(); //.then((response) => {expect(response.ajaxSuccess)})
+        this.landingPageElements.selectLanguageLink().contains(lang).click(); //.then((response) => {expect(response.ajaxSuccess)})
     }    
 }
 
 export class VerifyLandingPage{
     
+    verifyLandingPageElements={
+        articleCount : () => cy.get('#articlecount'),
+        lang : () => cy.get('#js-lang-list-button > span')
+    }
+
     englishWikiShouldBeDisplayed(){
-        cy.get('#articlecount').should('be.visible')
+        this.verifyLandingPageElements.articleCount().should('be.visible')
         .contains(' articles in').should('be.visible')
         .contains('English');
     }
 
     readWikiInYourLanguageDisplayed(){
-        cy.get('#js-lang-list-button > span')
-        .contains('Read Wikipedia in your language')
+        
+        this.verifyLandingPageElements.lang().contains('Read Wikipedia in your language')
         .should('be.visible');
     }
 
