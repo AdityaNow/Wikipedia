@@ -1,14 +1,17 @@
 export class PagesLinkToPage{
     
+    pageLinkElements={
+        pageListEle : () => cy.get('#ooui-php-1'),
+        getListItemsEle : () => cy.get('.mw-widget-titleOptionWidget')
+    }
+
     pageList(){
-        cy.get('#ooui-php-1').click();        
+        this.pageLinkElements.pageListEle().click();        
     }
 
     getListItemsFromPage(keyword1){
-        cy.get('.mw-widget-titleOptionWidget')
+        this.pageLinkElements.getListItemsEle();
     }
-
-
 }
 
 
