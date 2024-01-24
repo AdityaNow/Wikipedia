@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
 import { LandingPage, VerifyPageLanding } from "../pageObjects/LandingPage";
+import { Tools } from "../pageObjects/ToolsPage";
+import { wordDaily } from "../pageObjects/WordOfTheDayPage";
 
 
 describe('Wiktionary', () => 
@@ -14,6 +16,9 @@ describe('Wiktionary', () =>
 
     it('Word of the day', () =>
     {
-        
+        Tools.toolsDropdown();
+        Tools.selectAOptioFromToolsDropdown('Wiktionary');
+        cy.wait(500);
+        wordDaily.wordofDayPresent();
     });    
 });
