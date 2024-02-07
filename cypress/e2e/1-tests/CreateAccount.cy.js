@@ -15,5 +15,8 @@ describe('Create Account', () =>
     it('Create Account Fields', () =>
     {
         CreateAccount.clickCreateAccountBtn();
+        CreateAccount.usernameLabelIsPresent();
+        CreateAccount.enterUsername("user1");
+        CreateAccount.passwordLabelIsPresent();
     });    
 });
