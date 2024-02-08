@@ -18,5 +18,7 @@ describe('Create Account', () =>
         CreateAccount.usernameLabelIsPresent();
         CreateAccount.enterUsername("user1");
         CreateAccount.passwordLabelIsPresent();
+        CreateAccount.enterPassword("Jq@l1945");
+        CreateAccount.retypePassword("Jq@l1945");
     });    
 });
