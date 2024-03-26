@@ -23,3 +23,6 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//
+// Record Execution
+// npx cypress run --record --key 4b864b2d-a348-458c-92c7-1db00f997efe
