@@ -23,9 +23,8 @@ describe('Wikipedia-Tools', () =>
     {
         Tools.toolsDropdown();
         Tools.selectAOptioFromToolsDropdown('What links here');
-        cy.wait(500)
-        PagesLinkTo.pageList();
-        PagesLinkTo.getListItemsFromPage()
+        cy.wait(500).then(() => { PagesLinkTo.pageList(); });
+        cy.wait(1500).then(() => { PagesLinkTo.getListItemsFromPage(); });
     });
 
     it('Main Menu Items', () => {
