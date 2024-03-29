@@ -10,7 +10,20 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+    Cypress.Commands.add('login', (username, password) => 
+    {
+        cy.get('[id="pt-login-2"]').click();
+        cy.get('#wpName1').type(username); //ID
+        cy.get('#wpPassword1').type(password);
+        cy.get('#wpLoginAttempt').click();
+        cy.contains('Arix120').should('be.visible');
+    });
+    Cypress.Commands.add('logout', () => 
+    {
+        cy.get('#vector-user-links-dropdown-checkbox').click();
+        cy.get('[title="Log out"]').contains('Log out').should('be.visible').click();
+        cy.get('#firstHeading').contains('Log out').should('be.visible');
+    });
 //
 //
 // -- This is a child command --
