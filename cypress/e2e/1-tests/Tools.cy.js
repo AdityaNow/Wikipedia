@@ -32,5 +32,8 @@ describe('Wikipedia-Tools', () =>
         Tools.getAllMenuItems();
     });
 
+    it.only('Talk Tab', () => {
+        Tools.clickTalkTab();
+    });
     
 });
