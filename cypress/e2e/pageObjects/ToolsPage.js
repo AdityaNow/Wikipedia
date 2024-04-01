@@ -4,7 +4,9 @@ export class ToolsPage{
         toolsDropdown : () => cy.get('#vector-page-tools-dropdown-checkbox'),
         pageTools : () => cy.get('#vector-page-tools'),
         threeHorizontalLines : () => cy.get('#vector-main-menu-dropdown-checkbox'),
-        menuItems : () => cy.get('#vector-main-menu')
+        menuItems : () => cy.get('#vector-main-menu'),
+        talkTab : () => cy.get('#ca-talk'),
+        talkHeading : () => cy.get('#firstHeading')
     }
 
     toolsDropdown(){
@@ -28,7 +30,6 @@ export class ToolsPage{
                 let AboutWikipedia = "";
                 let ContactUs = "";
                 let Donate = "";
-
                 let Help = "";
                 let LearnToEdit = "";
                 let CommunityPortal = "";
@@ -70,6 +71,15 @@ export class ToolsPage{
 
             }
         );
+    }
+
+    clickTalkTab()
+    {
+        this.toolsElements.talkTab().should('exist').click();
+        this.toolsElements.talkHeading().as('talkHeadings')
+        cy.get('@talkHeadings').contains('Talk');
+        cy.get('@talkHeadings').contains(':');
+        cy.get('@talkHeadings').contains('Main Page');
     }
 
 }
