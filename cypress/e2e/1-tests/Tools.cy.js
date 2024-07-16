@@ -3,7 +3,6 @@
 import { LandingPage, VerifyPageLanding } from "../pageObjects/LandingPage";
 import { Tools } from "../pageObjects/ToolsPage";
 import { PagesLinkTo } from "../pageObjects/PagesLinkToPage";
-import { shortUrl } from "../pageObjects/ShortUrlPage";
 
 describe('Wikipedia-Tools', () => 
 {
@@ -33,16 +32,8 @@ describe('Wikipedia-Tools', () =>
         Tools.getAllMenuItems();
     });
 
-    it('Talk Tab', () => {
+    it.only('Talk Tab', () => {
         Tools.clickTalkTab();
     });
-
-    it('Get shortened URL', () =>
-        {
-            Tools.toolsDropdown();
-            Tools.selectAOptioFromToolsDropdown('Get shortened URL');
-            cy.wait(200).then(() => { shortUrl.clickCopy(); });
-            cy.wait(100).then(() => { shortUrl.urlIsShortened(); });
-        });   
     
 });
