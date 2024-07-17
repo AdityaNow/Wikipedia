@@ -3,7 +3,8 @@
 import { LandingPage, VerifyPageLanding } from "../pageObjects/LandingPage";
 import { Tools } from "../pageObjects/ToolsPage";
 import { PagesLinkTo } from "../pageObjects/PagesLinkToPage";
-import { shortUrl } from "../pageObjects/ShortUrlPage";
+import { ShortUrl } from "../pageObjects/ShortUrlPage";
+import { DownloadQrCode } from "../pageObjects/DownloadQrPage";
 
 describe('Wikipedia-Tools', () => 
 {
@@ -41,8 +42,15 @@ describe('Wikipedia-Tools', () =>
         {
             Tools.toolsDropdown();
             Tools.selectAOptioFromToolsDropdown('Get shortened URL');
-            cy.wait(200).then(() => { shortUrl.clickCopy(); });
-            cy.wait(100).then(() => { shortUrl.urlIsShortened(); });
-        });   
+            cy.wait(200).then(() => { ShortUrl.clickCopy(); });
+            cy.wait(100).then(() => { ShortUrl.urlIsShortened(); });
+        }); 
+        
+    it('Download QR Code', () =>
+        {
+            Tools.toolsDropdown();
+            Tools.selectAOptioFromToolsDropdown('Download QR code');
+            cy.wait(100).then(() => { DownloadQrCode.qrDownloadedNotification(); });
+        });
     
 });

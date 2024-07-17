@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^13.13.0"
+    "cypress": "^13.13.1",
+    "cypress-downloadfile": "^1.2.4"
   }
 }
