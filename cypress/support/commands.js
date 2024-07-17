@@ -10,6 +10,10 @@
 //
 //
 // -- This is a parent command --
+
+import 'cypress-downloadfile/lib/downloadFileCommand';
+
+
     Cypress.Commands.add('login', (username, password) => 
     {
         cy.get('[id="pt-login-2"]').click();

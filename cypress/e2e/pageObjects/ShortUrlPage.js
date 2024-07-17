@@ -17,4 +17,4 @@ export class ShortenUrl{
 }
 
 
-export const shortUrl = new ShortenUrl()
+export const ShortUrl = new ShortenUrl()
