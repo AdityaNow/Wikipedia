@@ -52,5 +52,11 @@ describe('Wikipedia-Tools', () =>
             Tools.selectAOptioFromToolsDropdown('Download QR code');
             cy.wait(100).then(() => { DownloadQrCode.qrDownloadedNotification(); });
         });
-    
+
+    it.only('Wikidata Item', () =>
+        {
+            Tools.toolsDropdown();
+            Tools.selectAOptioFromToolsDropdown('Wikidata item');
+            cy.wait(5000).then(() => { cy.url().should('be.equal', 'https://www.wikidata.org/wiki/Q5296'); });
+        });
 });
