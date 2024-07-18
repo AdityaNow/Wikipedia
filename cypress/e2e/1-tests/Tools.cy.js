@@ -53,7 +53,7 @@ describe('Wikipedia-Tools', () =>
             cy.wait(100).then(() => { DownloadQrCode.qrDownloadedNotification(); });
         });
 
-    it.only('Wikidata Item', () =>
+    it('Wikidata Item', () =>
         {
             Tools.toolsDropdown();
             Tools.selectAOptioFromToolsDropdown('Wikidata item');
