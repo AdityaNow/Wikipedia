@@ -5,6 +5,7 @@ import { Tools } from "../pageObjects/ToolsPage";
 import { PagesLinkTo } from "../pageObjects/PagesLinkToPage";
 import { ShortUrl } from "../pageObjects/ShortUrlPage";
 import { DownloadQrCode } from "../pageObjects/DownloadQrPage";
+import { MediaWiki } from "../pageObjects/MediaWikiFuncPage";
 
 describe('Wikipedia-Tools', () => 
 {
@@ -53,10 +54,10 @@ describe('Wikipedia-Tools', () =>
             cy.wait(100).then(() => { DownloadQrCode.qrDownloadedNotification(); });
         });
 
-    it('Wikidata Item', () =>
+    it.only('Wikidata Item', () =>
         {
             Tools.toolsDropdown();
             Tools.selectAOptioFromToolsDropdown('Wikidata item');
-            cy.wait(5000).then(() => { cy.url().should('be.equal', 'https://www.wikidata.org/wiki/Q5296'); });
+            MediaWiki.WikiMediaIsLoaded();
         });
 });
