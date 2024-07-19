@@ -9,6 +9,13 @@ export class MediaWikiFuncPage{
             cy.get('#firstHeading').contains('MediaWiki is a collaboration and documentation platform brought to you by a vibrant community.').should('exist').should('be.visible');
         });
     }
+    
+    WikiMediaIsLoaded(){
+    cy.origin('https://www.wikidata.org/wiki/Q5296', () =>
+        {
+            cy.get('title').contains('Wikimedia main page - Wikidata');
+        });
+    }
 }
 
 export const MediaWiki = new MediaWikiFuncPage()
