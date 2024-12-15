@@ -19,7 +19,7 @@ describe('Create Account', () =>
         CreateAccount.enterUsername("user1");
         cy.wait(1000);
         CreateAccount.enterUsername("{selectAll}{backspace}");
-        CreateAccount.enterUsername("user12345678909999")
+        CreateAccount.enterUsername("User12345678909999")
         CreateAccount.catchUsernameError();
         CreateAccount.passwordLabelIsPresent();
         CreateAccount.enterPassword("Jq@l1945");
