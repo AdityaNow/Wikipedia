@@ -8,9 +8,9 @@ export class CreateAccountPage {
     usernameError: () => cy.get('[class="cdx-message__content"]'),
     passwordLabel: () => cy.get('[for="wpPassword2"]').contains("Password"),
     passwordInput: () =>
-      cy.get('[id="wpPassword2"]', '[placeholder="Enter a password"]'),
+      cy.get('[id="wpPassword2"]').should("have.attr", "placeholder","Enter a password"),
     retypePasswordInput: () =>
-      cy.get('[id="wpRetype"]', '[placeholder="Enter password again"]'),
+      cy.get('[id="wpRetype"]').should("have.attr", "placeholder","Enter password again")
   };
 
   clickCreateAccountBtn() {
